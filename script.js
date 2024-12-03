@@ -93,81 +93,36 @@ function Delte(currentId){
 //         console.log("Can't Update");
 //     }
 // }
-// function Update(currentId) {
-//     if (currentId) {
-//         const taskElement = document.getElementById(currentId); 
-//         if (taskElement) {
-//             const textSpan = taskElement.querySelector('span'); 
-
-//             if (textSpan.querySelector('input')) {
-//                 const inputElement = textSpan.querySelector('input');
-//                 const newText = inputElement.value.trim();
-//                 textSpan.innerHTML = newText || inputElement.placeholder; 
-//             } else {
-//                 const originalText = textSpan.textContent.trim(); 
-
-//                 textSpan.innerHTML = `<input type="text" value="${originalText}" class="flex-1 w-full border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 p-2 ">`;
-
-//                 const inputElement = textSpan.querySelector('input');
-//                 inputElement.focus(); 
-                
-//                 inputElement.addEventListener('blur', function () {
-//                     const newText = inputElement.value.trim();
-//                     textSpan.innerHTML = newText || originalText;
-//                 });
-
-//                 inputElement.addEventListener('keydown', function (event) {
-//                     if (event.key === 'Enter') {
-//                         const newText = inputElement.value.trim();
-//                         textSpan.innerHTML = newText || originalText; 
-//                     }
-//                 });
-//             }
-//         } else {
-//             console.log("Task element not found.");
-//         }
-//     } else {
-//         console.log("Can't Update");
-//     }
-// }
-
 function Update(currentId) {
     if (currentId) {
         const taskElement = document.getElementById(currentId); 
         if (taskElement) {
             const textSpan = taskElement.querySelector('span'); 
-            const updateBtn = taskElement.querySelector('button[data-action="update"]');
-            const doneBtn = document.createElement('button');
-            doneBtn.classList.add('bg-green-500', 'text-white', 'px-3', 'py-1', 'rounded-lg', 'hover:bg-green-600', 'transition-colors');
-            doneBtn.textContent = 'Done';
-            doneBtn.dataset.action = 'done';
-            taskElement.replaceChild(doneBtn, updateBtn);
 
-            const originalText = textSpan.textContent.trim(); 
-
-            textSpan.innerHTML = `<input type="text" value="${originalText}" class="flex-1 w-full border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 p-2 ">`;
-
-            const inputElement = textSpan.querySelector('input');
-            inputElement.focus(); 
-            inputElement.addEventListener('blur', function () {
+            if (textSpan.querySelector('input')) {
+                const inputElement = textSpan.querySelector('input');
                 const newText = inputElement.value.trim();
-                textSpan.innerHTML = newText || originalText; 
-                taskElement.replaceChild(updateBtn, doneBtn);
-            });
+                textSpan.innerHTML = newText || inputElement.placeholder; 
+            } else {
+                const originalText = textSpan.textContent.trim(); 
 
-            inputElement.addEventListener('keydown', function (event) {
-                if (event.key === 'Enter') {
+                textSpan.innerHTML = `<input type="text" value="${originalText}" class="flex-1 w-full border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 p-2 ">`;
+
+                const inputElement = textSpan.querySelector('input');
+                inputElement.focus(); 
+                
+                inputElement.addEventListener('blur', function () {
                     const newText = inputElement.value.trim();
-                    textSpan.innerHTML = newText || originalText; 
-                    taskElement.replaceChild(updateBtn, doneBtn);
-                }
-            });
+                    textSpan.innerHTML = newText || originalText;
+                });
 
-            doneBtn.addEventListener('click', function () {
-                const newText = inputElement.value.trim();
-                textSpan.innerHTML = newText || originalText; 
-                taskElement.replaceChild(updateBtn, doneBtn);
-            });
+                inputElement.addEventListener('keydown', function (event) {
+                    if (event.key === 'Enter') {
+                        const newText = inputElement.value.trim();
+                        textSpan.innerHTML = newText || originalText; 
+                    }
+                });
+            }
         } else {
             console.log("Task element not found.");
         }
@@ -175,6 +130,51 @@ function Update(currentId) {
         console.log("Can't Update");
     }
 }
+
+// function Update(currentId) {
+//     if (currentId) {
+//         const taskElement = document.getElementById(currentId); 
+//         if (taskElement) {
+//             const textSpan = taskElement.querySelector('span'); 
+//             const updateBtn = taskElement.querySelector('button[data-action="update"]');
+//             const doneBtn = document.createElement('button');
+//             doneBtn.classList.add('bg-green-500', 'text-white', 'px-3', 'py-1', 'rounded-lg', 'hover:bg-green-600', 'transition-colors');
+//             doneBtn.textContent = 'Done';
+//             doneBtn.dataset.action = 'done';
+//             taskElement.replaceChild(doneBtn, updateBtn);
+
+//             const originalText = textSpan.textContent.trim(); 
+
+//             textSpan.innerHTML = `<input type="text" value="${originalText}" class="flex-1 w-full border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 p-2 ">`;
+
+//             const inputElement = textSpan.querySelector('input');
+//             inputElement.focus(); 
+//             inputElement.addEventListener('blur', function () {
+//                 const newText = inputElement.value.trim();
+//                 textSpan.innerHTML = newText || originalText; 
+//                 taskElement.replaceChild(updateBtn, doneBtn);
+//             });
+
+//             inputElement.addEventListener('keydown', function (event) {
+//                 if (event.key === 'Enter') {
+//                     const newText = inputElement.value.trim();
+//                     textSpan.innerHTML = newText || originalText; 
+//                     taskElement.replaceChild(updateBtn, doneBtn);
+//                 }
+//             });
+
+//             doneBtn.addEventListener('click', function () {
+//                 const newText = inputElement.value.trim();
+//                 textSpan.innerHTML = newText || originalText; 
+//                 taskElement.replaceChild(updateBtn, doneBtn);
+//             });
+//         } else {
+//             console.log("Task element not found.");
+//         }
+//     } else {
+//         console.log("Can't Update");
+//     }
+// }
 
 
 
