@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Indie+Flower&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body class="bg-gray-100 min-h-screen flex justify-center p-5 " dir="rtl" >
+    <div class="container bg-white p-8 rounded-lg shadow-md   w-full">
+        <h1 class="text-5xl font-bold text-center text-gray-800 mb-6"> قائمة المهام  </h1>
+        <div class="flex gap-3 mb-6 rtl" rtl>
+            <input type="text" id="todoInput" autocomplete="off" placeholder="  أضف مهمة جديدة...  " 
+                   class="flex-1 p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-2xl">
+            <button id="addTodo" 
+                    class="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors" onclick="addTodo()">
+                    إضافة
+            </button>
+        </div>
+        <ul id="todoList" class="space-y-3">
+            
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
