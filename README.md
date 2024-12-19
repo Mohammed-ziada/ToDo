@@ -1,0 +1,66 @@
+# React Development Topics
+
+- **Closures, Scope, and Hoisting**
+- **Promises and Async/Await**
+- **Event Loop and Callbacks**
+- **Prototypes and Inheritance**
+- **Module Systems**
+  - ESM
+  - CommonJS
+- **React Lifecycle and Hooks**
+  - useEffect
+  - useMemo, etc.
+- **Context API and State Management**
+  - Redux
+  - Zustand, etc.
+- **React Performance Optimization**
+- **Server-Side Rendering**
+  - Next.js
+- **Dynamic Routing and Code Splitting**
+- **Lazy Loading and Code Splitting**
+- **Critical Rendering Path**
+- **Web Vitals**
+  - LCP
+  - FID
+  - CLS
+- **Caching Strategies**
+- **CDN Optimization**
+- **Responsive Design**
+- **CSS-in-JS**
+  - Styled Components
+  - Emotion
+- **Flexbox and Grid Systems**
+- **Theming and Design Systems**
+- **Component Design Principles**
+- **Monorepo Architectures**
+- **Micro-Frontends**
+- **State Management Best Practices**
+- **Unit Testing**
+  - Jest
+  - React Testing Library
+- **End-to-End Testing**
+  - Cypress
+  - Playwright
+- **Mocking APIs**
+- **Code Coverage Analysis**
+- **REST vs GraphQL**
+- **Authentication**
+  - OAuth
+  - JWT
+- **Error Handling and Retry Mechanisms**
+- **WebSockets**
+- **Webpack, Vite, or Rollup**
+- **Code Splitting and Tree Shaking**
+- **CI/CD Integration**
+- **Linting and Formatting**
+  - ESLint
+  - Prettier
+- **CORS and Security**
+  - XSS
+  - CSRF
+- **Local Storage, Session Storage, Cookies**
+- **Browser Rendering Mechanism**
+- **Progressive Web Apps (PWAs)**
+- **Accessibility Standards and Best Practices**
+  - ARIA
+  - WCAG
